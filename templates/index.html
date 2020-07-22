@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>NLP Model to classify Review</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+ <style>
+input[type=text] {
+background-color:LightSlateGray;
+ color: white;
+ border: 1px solid red;
+ border-radius: 4px;
+ width: 400px;
+ height:100px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="w3-container w3-blue w3-center">
+<h1><b>NLP Naive Bayes Model </br>To </br>Classify Restaurant Review</b></h1>
+</div>
+ <div class="w3-container w3-blue w3-center">
+ 
+	
+</br></br>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form class="w3-container" action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Review" placeholder="User Review" required="required" /></br></br>
+        
+
+        <button type="submit" class="w3-button w3-round-xlarge w3-large w3-teal" style="width:30%">Submit</button>
+    </form>
+
+   <br>
+   <br>
+   <b>{{ prediction_text }}<b>
+<br>
+<br>
+</div>
+
+<div class="w3-container w3-gray w3-border w3-round-xlarge w3-center">
+<h1>Developed by Govinda Rajbhar</h2>
+</div>
+
+ 
+
+</body>
+</html>
